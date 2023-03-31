@@ -1,35 +1,26 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
-import CreateTod from './components/CreateTod';
-import { Todo } from './models';
-import AllTodo from './components/AllTodo';
+import Accord from './components2/Accord';
+import Containers from './components2/Containers';
+import DrawerMenu from './components2/DrawerMenu';
+import Form from './components2/Form';
+import ListComponents from './components2/ListComponents';
+import Modals from './components2/Modals';
+import ResponsiveGrid from './components2/ResponsiveGrid';
 
 
 
 function App() {
  
-
-  const [todo,setTodo] = useState<Todo>({
-    id:Date.now()* Math.random()*10,
-    name:'',
-    email:'',
-    password:'',
-    isCompleted:false
-  })
-const [allTodos,setAllTodos] = useState<Todo[]>([])
-
-const handleDelete = (id:any)=>{ 
-  setAllTodos([...allTodos.filter(item=>item.id!==id)])
-}
-
-
-
-
   return (
     <div className="App">
-      <h1>hello this is a home page</h1>
-      <CreateTod todo={todo} setTodo={setTodo} allTodos= {allTodos} setAllTodos={setAllTodos} />
-      <AllTodo allTodos={allTodos} setAllTodos = {setAllTodos} handleDelete = {handleDelete}/>
+      {/* <Accord/> */}
+      {/* <Containers/> */}
+      {/* <DrawerMenu/> */}
+      {/* <Form/> */}
+      {/* <ListComponents/> */}
+      {/* <Modals/> */}
+      <ResponsiveGrid/>
     </div>
   );
 }
